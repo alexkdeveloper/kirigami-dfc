@@ -86,26 +86,47 @@ Kirigami.ApplicationWindow {
                     text: "Name:"
                     Layout.alignment: Qt.AlignRight
                 }
-                Controls.TextField {
+                Kirigami.ActionTextField {
                     id: name
                     placeholderText: i18n("Application Name")
+                    rightActions: Kirigami.Action {
+                    icon.name: "edit-clear"
+                    visible: name.text !== ""
+                    onTriggered: {
+                       name.clear();
+                    }
+                  }
                 }
                 Controls.Label {
                     text: "Comment:"
                     Layout.alignment: Qt.AlignRight
                 }
-                Controls.TextField {
+                Kirigami.ActionTextField {
                     id: comment
                     placeholderText: i18n("Comment")
+                    rightActions: Kirigami.Action {
+                    icon.name: "edit-clear"
+                    visible: comment.text !== ""
+                    onTriggered: {
+                       comment.clear();
+                    }
+                  }
                 }
                 Controls.Label {
                     text: "Categories:"
                     Layout.alignment: Qt.AlignRight
                 }
-                Controls.TextField {
-                    id: categories
-                    placeholderText: i18n("Application Categories")
-                }
+                Kirigami.ActionTextField {
+                   id: categories
+                   placeholderText: i18n("Application Categories")
+                   rightActions: Kirigami.Action {
+                   icon.name: "edit-clear"
+                   visible: categories.text !== ""
+                   onTriggered: {
+                       categories.clear();
+                   }
+                 }
+               }
              }
 
              GridLayout {
@@ -116,9 +137,16 @@ Kirigami.ApplicationWindow {
                     text: "Icon:"
                     Layout.alignment: Qt.AlignRight
                 }
-                Controls.TextField {
+                Kirigami.ActionTextField {
                    id: icon
                    placeholderText: i18n("Application Icon Path")
+                   rightActions: Kirigami.Action {
+                   icon.name: "edit-clear"
+                   visible: icon.text !== ""
+                   onTriggered: {
+                      icon.clear();
+                    }
+                  }
                 }
                 Controls.Button {
                    icon.name: "folder"
@@ -128,9 +156,16 @@ Kirigami.ApplicationWindow {
                     text: "Exec:"
                     Layout.alignment: Qt.AlignRight
                 }
-                Controls.TextField {
+                Kirigami.ActionTextField {
                     id: exec
                     placeholderText: i18n("Path to the executable file")
+                    rightActions: Kirigami.Action {
+                    icon.name: "edit-clear"
+                    visible: exec.text !== ""
+                    onTriggered: {
+                       exec.clear();
+                    }
+                  }
                 }
                 Controls.Button {
                     icon.name: "folder"
