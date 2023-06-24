@@ -158,7 +158,7 @@ Kirigami.ApplicationWindow {
                 }
                 Kirigami.ActionTextField {
                     id: exec
-                    placeholderText: i18n("Path to the executable file")
+                    placeholderText: i18n("Executable File Path")
                     rightActions: Kirigami.Action {
                     icon.name: "edit-clear"
                     visible: exec.text !== ""
