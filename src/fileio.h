@@ -12,7 +12,6 @@ class FileIO : public QObject
 
 public:
     FileIO();
-    Q_INVOKABLE void open(QString path);
     Q_INVOKABLE void save(QString text, QString path);
     Q_INVOKABLE bool exists(QString path);
     Q_INVOKABLE QString toPath(QString path);

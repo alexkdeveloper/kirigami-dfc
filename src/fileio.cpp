@@ -3,15 +3,10 @@
 #include <QFile>
 #include <QUrl>
 #include <QTextStream>
-#include <QDesktopServices>
 
 FileIO::FileIO()
 {
 
-}
-
-void FileIO::open(QString path){
-    QDesktopServices::openUrl(QUrl("file:///"+path, QUrl::TolerantMode));
 }
 
 void FileIO::save(QString text, QString path){

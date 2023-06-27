@@ -44,7 +44,7 @@ Kirigami.ApplicationWindow {
                 text: i18n("Open folder")
                 icon.name: "folder"
                 onTriggered: {
-                   FileIO.open(EnvironmentVariable.value("HOME") + "/.local/share/applications/")
+                   Qt.openUrlExternally("file:///"+EnvironmentVariable.value("HOME") + "/.local/share/applications/")
                 }
             },
             Kirigami.Action {
