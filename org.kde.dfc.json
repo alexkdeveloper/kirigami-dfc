@@ -4,15 +4,13 @@
     "runtime-version": "5.15",
     "sdk": "org.kde.Sdk",
     "command": "dfc",
-    "tags": ["nightly"],
-    "desktop-file-name-suffix": " (Nightly)",
+   
     "finish-args": [
         "--share=ipc",
-        "--share=network",
         "--socket=x11",
         "--socket=wayland",
         "--device=dri",
-        "--filesystem=home"
+        "--filesystem=~/.local/share/applications"
     ],
     "separate-locales": false,
 
